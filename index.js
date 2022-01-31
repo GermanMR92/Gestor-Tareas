@@ -2,6 +2,7 @@
 const express = require('express'); //Importamos express
 const connectDB = require('./config/db');
 const cors = require('cors'); // se instala con npm i cors
+require('dotenv').config({ path: 'variables.env' });
 
 // CREAR SERVIDOR
 const app = express(); 
