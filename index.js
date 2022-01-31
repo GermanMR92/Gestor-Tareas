@@ -17,7 +17,7 @@ app.use(cors()); // por seguridad cuando hay conexion de una URL a otra salta un
 app.use(express.json({ extended: true }));
 
 // PUERTO DEL SERVER
-const port = process.env.port || 4000; // si existe el puerto en process del arch variables.env se asigna si no el 4000 (el cliente en el 3000)
+const PORT = process.env.PORT || 4000; // si existe el puerto en process del arch variables.env se asigna si no el 4000 (el cliente en el 3000)
 
 // prueba de que el servidor esta corriendo, tan solo entramos a localhost:4000
 app.get('/', (req, res) => {
@@ -31,6 +31,6 @@ app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 
 // ARRANCAR SERVER
-app.listen(port, '0.0.0.0', () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Servidor ON en el puerto ${port}`);
 })
